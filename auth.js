@@ -1,4 +1,4 @@
-const API_BASE = 'http://localhost:8080';
+const API_BASE = 'http://192.168.38.36:8080';
 const $ = (s, root=document) => root.querySelector(s);
 const toast = (title, message, type='success') => { const region=$('#toastRegion'); if(!region)return; const el=document.createElement('div');el.className=`toast ${type==='error'?'error':''}`;el.innerHTML=`<i data-lucide="${type==='error'?'alert-circle':'check-circle-2'}"></i><div><b>${escapeHtml(title)}</b><small>${escapeHtml(message)}</small></div>`;region.append(el);window.lucide?.createIcons();setTimeout(()=>el.remove(),4800); };
 function escapeHtml(v=''){return String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
