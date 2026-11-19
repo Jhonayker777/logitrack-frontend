@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b0e13"><title>LogiTrack · Acceso</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"><script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="auth-body">
+  <main class="auth-layout">
+    <section class="auth-visual"><div class="brand"><span class="brand-mark"><i data-lucide="boxes"></i></span><span>LogiTrack<span class="brand-dot">.</span></span></div>
+      <div class="visual-copy"><span class="eyebrow">CONTROL LOGÍSTICO INTELIGENTE</span><h1>Tu inventario,<br><em>bajo control.</em></h1><p>Visibilidad en tiempo real, trazabilidad completa y decisiones más inteligentes para cada bodega.</p>
+        <div class="visual-metrics"><div><strong>360°</strong><small>Visibilidad operativa</small></div><div><strong>100%</strong><small>Trazabilidad</small></div><div><strong>24/7</strong><small>Control de stock</small></div></div></div>
+      <div class="visual-foot"><span><i data-lucide="shield-check"></i> Plataforma segura</span><span>LOGISTICS · INVENTORY · AUDIT</span></div>
+    </section>
+    <section class="auth-panel"><div class="auth-card"><div class="mobile-brand brand"><span class="brand-mark"><i data-lucide="boxes"></i></span><span>LogiTrack<span class="brand-dot">.</span></span></div>
+      <span class="eyebrow">BIENVENIDO DE NUEVO</span><h2>Inicia sesión</h2><p class="muted">Ingresa tus credenciales para acceder al espacio de trabajo.</p>
+      <form id="loginForm" class="form-stack">
+        <label>Usuario<input name="username" autocomplete="username" placeholder="Tu nombre de usuario" required minlength="3"></label>
+        <label>Contraseña<div class="password-wrap"><input id="password" name="password" type="password" autocomplete="current-password" placeholder="••••••••" required><button type="button" class="icon-button password-toggle" aria-label="Mostrar contraseña"><i data-lucide="eye"></i></button></div></label>
+        <div class="form-row between"><label class="check-label"><input type="checkbox" id="rememberUser"> Recordar usuario</label><button type="button" class="text-button" id="forgotLink">¿Olvidaste tu contraseña?</button></div>
+        <button class="btn btn-primary btn-wide" type="submit" id="loginButton"><span>Entrar al sistema</span><i data-lucide="arrow-up-right"></i></button>
+      </form>
+      <div class="auth-divider"><span>¿Nuevo en LogiTrack?</span></div><button class="btn btn-secondary btn-wide" id="registerLink">Solicitar acceso</button>
+      <p class="auth-legal">Al continuar, aceptas las políticas de uso y seguridad de tu organización.</p>
+    </div><div class="auth-copyright">© <span id="year"></span> LogiTrack · Operaciones con claridad.</div></section>
+  </main>
+  <div id="toastRegion" class="toast-region" aria-live="polite"></div>
+  <div id="authModal" class="modal-backdrop hidden"><section class="modal"><header class="modal-header"><div><span class="eyebrow" id="authModalEyebrow">ACCESO</span><h3 id="authModalTitle">Solicitud</h3></div><button class="icon-button" id="authModalClose"><i data-lucide="x"></i></button></header><div id="authModalBody"></div></section></div>
+  <script src="auth.js"></script>
+</body></html>
