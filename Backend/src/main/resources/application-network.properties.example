@@ -1,0 +1,4 @@
+# Añade estas propiedades al application.properties existente.
+# No reemplaces la configuración de MySQL, JWT ni correo.
+server.address=0.0.0.0
+server.port=8080
